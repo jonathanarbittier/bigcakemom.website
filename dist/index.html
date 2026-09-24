@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f3eb">
+<meta name="description" content="Bespoke cakes and desserts made in New York City by Big Cake Mom.">
+<title>Big Cake Mom — Made for the moment</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%23282220'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Georgia' font-size='23' fill='%23f7f3eb'%3EB%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--paper:#f7f3eb;--paper2:#eee7da;--ink:#282220;--muted:#746963;--rose:#bd746d;--line:rgba(40,34,32,.2);--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif;--gutter:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}button,input,select,textarea{font:inherit}button{color:inherit}img{max-width:100%}::selection{background:#e8c2b8;color:var(--ink)}
+.site-header{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;min-height:68px;padding:0 var(--gutter);border-bottom:1px solid var(--line)}.wordmark{font:600 17px/1 var(--serif);letter-spacing:-.02em;text-decoration:none;white-space:nowrap}.site-nav{position:absolute;top:67px;right:0;left:0;display:none;flex-direction:column;gap:0;padding:7px var(--gutter) 17px;background:var(--paper);border-bottom:1px solid var(--line)}.site-nav.is-open{display:flex}.site-nav a{padding:15px 0;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.12em;text-decoration:none;text-transform:uppercase}.site-nav a:last-child{border-bottom:0}.menu-toggle{display:grid;place-items:center;width:42px;height:42px;margin-right:-9px;border:0;background:transparent;cursor:pointer}.menu-icon,.menu-icon:before,.menu-icon:after{display:block;width:20px;height:1px;background:var(--ink);transition:transform .2s}.menu-icon{position:relative}.menu-icon:before,.menu-icon:after{position:absolute;left:0;content:""}.menu-icon:before{top:-6px}.menu-icon:after{top:6px}.menu-toggle[aria-expanded="true"] .menu-icon{background:transparent}.menu-toggle[aria-expanded="true"] .menu-icon:before{top:0;transform:rotate(45deg)}.menu-toggle[aria-expanded="true"] .menu-icon:after{top:0;transform:rotate(-45deg)}
+.hero{padding:28px 0 0}.hero-copy{position:relative;z-index:1;padding:0 var(--gutter) 22px}.hero h1{max-width:9em;margin:0;font:400 clamp(54px,13.9vw,92px)/.91 var(--serif);letter-spacing:-.075em}.hero-subtitle{max-width:20em;margin:18px 0 0;color:var(--muted);font:17px/1.4 var(--serif)}.hero-photo{position:relative;aspect-ratio:.72;height:auto;min-height:0;max-height:none;margin:0 12px;overflow:hidden;background:#eeefed}.hero-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;transform:scale(1);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}.hero-photo.is-loaded img{transform:scale(1)}.text-link{display:inline-flex;flex:none;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--ink);font-size:10px;letter-spacing:.11em;text-decoration:none;text-transform:uppercase}.text-link span{font-size:16px;transition:transform .2s}.text-link:hover span{transform:translate(3px,-2px)}
+
+.gallery{padding:33px 0 50px;background:var(--paper2)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 var(--gutter) 25px}.section-head h2{max-width:8em;margin:0;font:400 clamp(42px,10vw,68px)/.94 var(--serif);letter-spacing:-.06em}.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:22px 12px;padding:0 12px}.gallery-card{min-width:0;margin:0}.gallery-card:nth-child(even){padding-top:31px}.gallery-card:nth-child(4n+1) .gallery-frame{border-radius:48% 48% 4px 4px/32% 32% 4px 4px}.gallery-card:nth-child(4n+2) .gallery-frame{border-radius:4px 4px 46% 46%/4px 4px 30% 30%}.gallery-card:nth-child(4n+3) .gallery-frame{border-radius:48% 48% 4px 4px/28% 28% 4px 4px}.gallery-card:nth-child(4n) .gallery-frame{border-radius:4px 4px 48% 48%/4px 4px 31% 31%}.gallery-frame{display:block;width:100%;padding:0;overflow:hidden;border:0;background:#e5ddd0;cursor:zoom-in}.gallery-card img{display:block;width:100%;height:auto;aspect-ratio:var(--ratio, .78);object-fit:cover;object-position:center center;transition:transform .7s cubic-bezier(.2,.65,.25,1)}.gallery-frame:hover img{transform:scale(1.035)}.gallery-card:nth-child(3n) img{--ratio:.95}.gallery-card:nth-child(4n) img{--ratio:.7}.gallery-card:nth-child(5n) img{--ratio:.83}.gallery-card:nth-child(12) img{--ratio:.74;object-fit:contain;background:var(--paper2)}.gallery-card figcaption{display:none}.gallery-end{display:flex;align-items:center;justify-content:space-between;margin:26px var(--gutter) 0;padding-top:13px;border-top:1px solid var(--line);color:var(--muted);font:14px/1.4 var(--serif)}.gallery-end a{color:var(--ink)}
+.studio{display:grid;grid-template-columns:1fr;gap:28px;padding:80px var(--gutter) 84px}.studio-photo{width:100%;aspect-ratio:.77;object-fit:contain;object-position:center center;background:var(--paper2)}.studio-copy{align-self:center}.studio h2{max-width:10em;margin:0 0 18px;font:400 clamp(40px,10.7vw,72px)/.95 var(--serif);letter-spacing:-.06em}.studio p{max-width:28em;margin:0 0 19px;color:var(--muted);font:16px/1.65 var(--serif)}
+.order{padding:43px var(--gutter) 48px;background:#e6d0c7}.order h2{max-width:10em;margin:0 0 29px;font:400 clamp(40px,10vw,68px)/.96 var(--serif);letter-spacing:-.055em}.steps{margin:0;padding:0;list-style:none;border-top:1px solid rgba(40,34,32,.25)}.steps li{display:grid;grid-template-columns:40px 1fr;gap:13px;padding:17px 0;border-bottom:1px solid rgba(40,34,32,.25)}.steps .num{font:italic 16px/1.2 var(--serif);color:var(--rose)}.steps h3{margin:0 0 5px;font:400 21px/1.2 var(--serif)}.steps p{max-width:32em;margin:0;color:#655751;font-size:13px;line-height:1.55}
+.inquiry{padding:62px var(--gutter) 72px;background:#d8a29a}.inquiry-lead{margin-bottom:28px}.inquiry h2{max-width:8em;margin:0 0 14px;font:400 clamp(49px,12vw,82px)/.91 var(--serif);letter-spacing:-.065em}.inquiry-intro{max-width:27em;margin:0;color:#4e3936;font:16px/1.55 var(--serif)}.inquiry-form{display:grid;grid-template-columns:1fr;gap:17px}.field{display:grid;gap:7px}.field label{font-size:10px;letter-spacing:.1em;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;min-height:49px;padding:12px 12px;border:1px solid rgba(40,34,32,.48);border-radius:0;background:rgba(247,243,235,.45);color:var(--ink);font:16px/1.4 var(--sans)}.field textarea{min-height:118px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--ink);outline-offset:2px}.submit{width:100%;min-height:54px;margin-top:3px;padding:0 18px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;font-size:10px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}.submit:hover{background:transparent;color:var(--ink)}.form-note,.form-status{margin:0;font-size:12px;line-height:1.5}.form-note{color:#543e3a}.form-status{min-height:1.4em;font-weight:600}.instagram-followup{display:none;width:max-content;margin-top:6px}.instagram-followup.is-visible{display:inline-flex}.copy-fallback{width:100%;min-height:145px;padding:12px;border:1px solid var(--ink);background:var(--paper);font:14px/1.5 var(--sans)}
+.footer{display:grid;grid-template-columns:1fr;gap:21px;padding:25px var(--gutter) 23px;background:var(--paper);border-top:1px solid var(--line)}.footer-mark{font:400 28px/1 var(--serif);letter-spacing:-.04em}.footer-bottom{display:flex;align-items:end;justify-content:space-between;gap:22px}.footer-note{margin:0;color:var(--muted);font-size:10px}.footer-links{display:flex;flex-wrap:wrap;gap:15px}.footer-links a{font-size:9px;letter-spacing:.11em;text-decoration:none;text-transform:uppercase}.footer-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.25,1)}.reveal.is-visible{opacity:1;transform:translateY(0)}
+@media(min-width:700px){.hero-photo img{object-fit:contain;object-position:center center}:root{--gutter:clamp(34px,6vw,92px)}.site-header{min-height:78px}.wordmark{font-size:19px}.menu-toggle{display:none}.site-nav{position:static;display:flex;flex-direction:row;gap:clamp(23px,4vw,58px);padding:0;background:transparent;border:0}.site-nav a{padding:10px 0;border:0;font-size:10px}.hero{display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;gap:3vw;min-height:min(760px,calc(100svh - 78px));padding:42px var(--gutter) 52px}.hero-copy{padding:0}.hero h1{font-size:clamp(74px,9.3vw,144px)}.hero-subtitle{max-width:14em;font-size:20px}.hero-photo{height:min(67vw,660px);min-height:540px;max-height:none;margin:0;aspect-ratio:auto}.gallery{padding:60px 0 72px}.section-head{align-items:end;padding:0 var(--gutter) 40px}.section-head h2{font-size:clamp(65px,8vw,112px)}.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:38px 18px;padding:0 var(--gutter)}.gallery-card:nth-child(even){padding-top:0}.gallery-card:nth-child(4n+2),.gallery-card:nth-child(4n){padding-top:80px}.gallery-card:nth-child(4n+2) img{--ratio:.78}.gallery-card:nth-child(4n+3) img{--ratio:.9}.gallery-card:nth-child(4n) img{--ratio:.74}.gallery-end{margin:42px var(--gutter) 0;padding-top:17px;font-size:16px}.studio{grid-template-columns:1.08fr .82fr;align-items:center;gap:9vw;padding:145px var(--gutter)}.studio-photo{max-height:740px;aspect-ratio:.83}.studio-copy{padding:35px 0}.studio h2{font-size:clamp(56px,6vw,94px)}.studio p{font-size:18px}.order{padding:72px var(--gutter) 78px}.order h2{max-width:11em;margin-bottom:43px;font-size:clamp(58px,7vw,96px)}.steps li{grid-template-columns:80px 1fr;gap:24px;padding:22px 0}.steps .num{font-size:21px}.steps h3{font-size:26px}.steps p{font-size:15px}.inquiry{display:grid;grid-template-columns:.78fr 1.22fr;gap:9vw;align-items:start;padding:95px var(--gutter) 105px}.inquiry-lead{position:sticky;top:30px;margin:0}.inquiry h2{font-size:clamp(61px,7vw,102px)}.inquiry-intro{font-size:18px}.inquiry-form{grid-template-columns:1fr 1fr;gap:20px 16px;padding-top:7px}.field.full{grid-column:1/-1}.submit{width:auto;justify-self:start;padding:0 28px}.form-note,.form-status,.instagram-followup,.copy-fallback{grid-column:1/-1}.footer{grid-template-columns:.8fr 1.2fr;align-items:end;padding:29px var(--gutter) 26px}.footer-bottom{justify-content:flex-end}.footer-mark{font-size:34px}.footer-note{font-size:11px}.footer-links{gap:23px}.footer-links a{font-size:10px}}
+@media(min-width:1100px){.hero{grid-template-columns:.72fr 1.28fr;gap:5vw}.hero-photo{height:min(64vw,720px)}.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:44px 24px}.gallery-card:nth-child(4n+2){padding-top:110px}.gallery-card:nth-child(4n+4){padding-top:60px}.inquiry{grid-template-columns:.85fr 1.15fr;gap:12vw}}
+@media(max-width:360px){:root{--gutter:17px}.hero h1{font-size:52px}.section-head h2{font-size:39px}.gallery-grid{gap:17px 9px;padding:0 9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.hero-photo img{transform:none}}
+@media(max-width:699px){.gallery-frame{cursor:default;pointer-events:none}}
+
+/* Instagram-inspired photo grid */
+.instagram{padding:42px 0 58px;background:var(--paper2)}
+.instagram-head{align-items:end;padding-bottom:22px}
+.instagram-head h2{max-width:none;font-size:clamp(34px,8vw,58px)}
+.instagram-handle{flex:none;padding-bottom:5px;color:var(--ink);font-size:10px;letter-spacing:.08em;text-decoration:none;text-transform:uppercase}
+.instagram-handle span{font-size:14px}
+.instagram-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:4px;padding:0 4px}
+.instagram-card,.instagram-card:nth-child(n){min-width:0;margin:0;padding:0}
+.instagram-card img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center;transition:opacity .2s}
+.instagram-card:hover img{opacity:.88}
+.instagram-card:nth-child(12) img{object-fit:contain;background:var(--paper2)}
+@media(min-width:700px){
+  .instagram{padding:62px 0 76px}
+ .instagram-head{padding-bottom:30px}
+ .instagram-head h2{font-size:clamp(56px,6.5vw,86px)}
+ .instagram-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:0 var(--gutter)}
+}
+@media(min-width:1100px){.instagram-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}}
+@media(max-width:360px){.instagram-head h2{font-size:32px}.instagram-grid{gap:3px;padding:0 3px}}
+
+/* Responsive editorial refinement */
+body{overflow-x:hidden}
+.site-header{background:rgba(247,243,235,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start}
+.hero .text-link{margin-top:22px}
+.hero-photo{isolation:isolate;border-radius:2px;background:#dedbd2;box-shadow:0 24px 60px rgba(54,42,36,.12)}
+.hero-photo::after{position:absolute;inset:0;z-index:1;border:1px solid rgba(255,255,255,.35);content:"";pointer-events:none}
+.hero-photo img{object-fit:cover;object-position:50% 55%;filter:saturate(.94) contrast(1.035) brightness(1.015)}
+.studio{position:relative;overflow:hidden}
+.studio-media{position:relative;min-width:0}
+.studio-photo{display:block;object-fit:cover;object-position:52% 49%;box-shadow:0 22px 50px rgba(54,42,36,.1);filter:saturate(.95) contrast(1.025)}
+.instagram{border-top:1px solid var(--line)}
+.instagram-profile{display:flex;align-items:center;gap:12px;padding:0 var(--gutter) 22px}
+.instagram-avatar{display:grid;flex:0 0 auto;place-items:center;width:42px;height:42px;border:1px solid var(--ink);border-radius:50%;font:italic 20px/1 var(--serif)}
+.instagram-identity{min-width:0;margin-right:auto}
+.instagram-identity strong,.instagram-identity span{display:block}
+.instagram-identity strong{font:600 15px/1.25 var(--serif)}
+.instagram-identity span{margin-top:2px;color:var(--muted);font-size:11px}
+.instagram-follow{flex:0 0 auto;padding:10px 14px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-size:9px;letter-spacing:.12em;text-decoration:none;text-transform:uppercase;transition:background .2s,color .2s}
+.instagram-follow:hover{background:transparent;color:var(--ink)}
+.instagram-grid{max-width:1200px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;padding:0 3px}
+.instagram-card{position:relative;overflow:hidden;background:#ddd3c6}
+.instagram-card::after{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,22,20,.16),transparent 45%);content:"";opacity:0;transition:opacity .25s;pointer-events:none}
+.instagram-card:hover::after{opacity:1}
+.instagram-card img{aspect-ratio:1;object-fit:cover;filter:saturate(.92) contrast(1.025);transform:scale(1.002);transition:transform .5s cubic-bezier(.2,.65,.25,1),filter .25s}
+.instagram-card:hover img{opacity:1;transform:scale(1.035);filter:saturate(1) contrast(1.025)}
+.instagram-card:nth-child(1) img{object-position:50% 48%}
+.instagram-card:nth-child(2) img{object-position:50% 42%}
+.instagram-card:nth-child(3) img{object-position:50% 48%}
+.instagram-card:nth-child(4) img{object-position:50% 55%}
+.instagram-card:nth-child(5) img{object-position:50% 58%}
+.instagram-card:nth-child(6) img{object-position:50% 48%}
+.instagram-card:nth-child(7) img{object-position:50% 56%}
+.instagram-card:nth-child(8) img{object-position:50% 0}
+.instagram-card:nth-child(9) img{object-position:50% 48%}
+.field input,.field select,.field textarea{border-radius:2px;transition:background .2s,border-color .2s}
+.field input:hover,.field select:hover,.field textarea:hover{background:rgba(247,243,235,.62);border-color:var(--ink)}
+
+@media(max-width:699px){
+ .site-header{position:sticky;top:0}.hero{padding-top:34px}.hero-copy{align-items:center;padding-bottom:30px;text-align:center}.hero h1{max-width:7.2em}.hero-subtitle{max-width:17em;margin-top:16px}.hero-photo{height:min(132vw,590px);margin:0 10px;aspect-ratio:auto}.hero-photo img{object-position:50% 57%}
+ .studio{gap:38px;padding-top:86px;padding-bottom:90px}.studio-media{margin-right:10px}.studio-photo{height:min(116vw,580px);aspect-ratio:auto}.studio-copy{padding-top:2px}.studio h2{max-width:8.8em}.order{padding-top:60px;padding-bottom:64px}.steps li{padding:20px 0}.inquiry{padding-top:72px;padding-bottom:78px}
+ .instagram{padding-top:50px}.instagram-head{display:block;padding-bottom:20px}.instagram-head h2{max-width:8em}.instagram-handle{display:inline-block;margin-top:12px;padding-bottom:0}.instagram-profile{padding-bottom:18px}
+ .footer-bottom{align-items:flex-start;flex-direction:column}.footer-links{gap:18px}
+}
+@media(min-width:700px){
+ .site-header{position:sticky;top:0}.hero{grid-template-columns:minmax(280px,.72fr) minmax(390px,1.28fr);min-height:calc(100svh - 78px);padding-top:48px;padding-bottom:58px}.hero-copy{max-width:520px}.hero-photo{height:min(72vh,720px);min-height:510px}.hero-photo img{object-position:50% 56%}
+ .studio{grid-template-columns:minmax(0,1.06fr) minmax(280px,.82fr);gap:clamp(54px,9vw,150px)}.studio-photo{height:min(72vw,760px);aspect-ratio:auto}
+ .instagram-head,.instagram-profile{width:min(1200px,100%);margin-right:auto;margin-left:auto}.instagram-profile{padding-bottom:24px}.instagram-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 var(--gutter)}.inquiry-lead{position:static}
+}
+@media(min-width:1400px){.hero{grid-template-columns:minmax(360px,520px) minmax(600px,820px);justify-content:space-between}.hero-photo{width:100%}.studio{grid-template-columns:minmax(0,720px) minmax(360px,520px);justify-content:space-between}}
+@media(hover:none){.instagram-card::after{display:none}.instagram-card:hover img{transform:none}}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="wordmark" href="#top" aria-label="Big Cake Mom home">Big Cake Mom</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"></span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <a href="#instagram">Instagram</a><a href="#studio">Studio</a><a href="#inquire">Inquire</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy"><h1 id="hero-title">Made for the moment.</h1><p class="hero-subtitle">One-of-a-kind cakes and desserts, thoughtfully made for your celebration.</p><a class="text-link" href="#inquire">Start your cake</a></div>
+    <figure class="hero-photo"><img src="images/eiffel-cake-enhanced.png" alt="A custom ivory cake with a blue bow, flowers and an Eiffel Tower detail" width="1102" height="1428" fetchpriority="high" decoding="async"></figure>
+  </section>
+  <section class="studio reveal" id="studio" aria-labelledby="studio-title">
+    <div class="studio-media"><img class="studio-photo" src="images/flower-garden-cake-enhanced.png" alt="An ivory tiered cake decorated with blush and orange flowers" width="1188" height="1324" loading="lazy" decoding="async"></div>
+    <div class="studio-copy"><h2 id="studio-title">The details make it yours.</h2><p>Every celebration has its own colors, stories, and little things people remember. Share what matters to you, and make it part of the cake.</p><a class="text-link" href="https://www.instagram.com/bigcakemom/" target="_blank" rel="noreferrer">More from the studio</a></div>
+  </section>
+  <section class="order" aria-labelledby="order-title">
+    <h2 id="order-title">Start with your idea.</h2>
+    <ol class="steps">
+      <li><span class="num">01</span><div><h3>Tell us what you’re celebrating</h3><p>A birthday, a wedding, a new arrival, or a reason of your own.</p></div></li>
+      <li><span class="num">02</span><div><h3>Share the date &amp; details</h3><p>A date, approximate servings, and the colors, flavors, or inspiration you already have.</p></div></li>
+      <li><span class="num">03</span><div><h3>Send an inquiry</h3><p>Your note is prepared for the inquiry form linked in Big Cake Mom’s Instagram bio.</p></div></li>
+    </ol>
+  </section>
+  <section class="inquiry" id="inquire" aria-labelledby="inquiry-title">
+    <div class="inquiry-lead"><h2 id="inquiry-title">Tell us what you’re celebrating.</h2><p class="inquiry-intro">A few details will help bring your idea to life. There’s room for the things you’re still figuring out, too.</p></div>
+    <form class="inquiry-form" id="cake-inquiry">
+      <div class="field"><label for="inquiry-name">Your name</label><input id="inquiry-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="inquiry-email">Email</label><input id="inquiry-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="inquiry-date">Event date</label><input id="inquiry-date" name="date" type="date" required></div>
+      <div class="field"><label for="inquiry-servings">Approx. servings</label><input id="inquiry-servings" name="servings" type="number" min="1" placeholder="Not sure yet"></div>
+      <div class="field full"><label for="inquiry-occasion">What are you celebrating?</label><select id="inquiry-occasion" name="occasion" required><option value="">Choose an occasion</option><option>Birthday</option><option>Wedding</option><option>Baby or bridal shower</option><option>Milestone celebration</option><option>Something else</option></select></div>
+      <div class="field full"><label for="inquiry-details">Tell us about your cake idea</label><textarea id="inquiry-details" name="details" placeholder="Theme, colors, flavors, inspiration, or anything else you know so far"></textarea></div>
+      <button class="submit" type="submit">Prepare my inquiry</button>
+      <p class="form-note">Your details will be copied so you can paste them into the inquiry form linked in the Instagram bio.</p><p class="form-status" id="inquiry-status" aria-live="polite"></p>
+      <a class="text-link instagram-followup" id="instagram-followup" href="https://www.instagram.com/bigcakemom/" target="_blank" rel="noreferrer">Continue to Instagram</a>
+    </form>
+  </section>
+  <section class="instagram" id="instagram" aria-labelledby="instagram-title">
+    <div class="section-head instagram-head"><h2 id="instagram-title">From Instagram</h2><a class="instagram-handle" href="https://www.instagram.com/bigcakemom/" target="_blank" rel="noreferrer">@bigcakemom</a></div>
+    <div class="instagram-profile"><span class="instagram-avatar" aria-hidden="true">B</span><div class="instagram-identity"><strong>Big Cake Mom</strong><span>Bespoke cakes · New York City</span></div><a class="instagram-follow" href="https://www.instagram.com/bigcakemom/" target="_blank" rel="noreferrer">Follow</a></div>
+    <div class="gallery-grid instagram-grid" aria-label="Big Cake Mom Instagram photo gallery">
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/birthday-cookies.jpg" alt="A collection of decorated cookies with playful faces" width="711" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/white-rose-tiered.jpg" alt="White tiered cake accented with delicate flowers" width="840" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/flower-cupcakes.jpg" alt="Small flower decorated cupcakes arranged together" width="894" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/sculpted-cake.jpg" alt="Sculpted cake with colorful custom decorations" width="622" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/eiffel-cake.jpg" alt="Tiered cake with an Eiffel Tower detail and flowers" width="772" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/colorful-character-cake.jpg" alt="Colorful character cake with playful details" width="838" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/floral-dessert.jpg" alt="Dessert arrangement decorated with flowers and fruit" width="622" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/sage-botanical-cake.jpg" alt="Pale cake decorated with green botanical details" width="691" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-card instagram-card reveal"><img src="images/grid/white-flower-cake.jpg" alt="White tiered cake with flower decorations" width="644" height="1000" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+</main>
+<footer class="footer"><a class="wordmark footer-mark" href="#top">Big Cake Mom</a><div class="footer-bottom"><p class="footer-note">Bespoke cakes &amp; desserts · New York City</p><nav class="footer-links" aria-label="Footer navigation"><a href="#instagram">Instagram</a><a href="#studio">Studio</a><a href="https://www.instagram.com/bigcakemom/" target="_blank" rel="noreferrer">Instagram</a></nav></div></footer>
+<script>
+(()=>{
+ const mobile=matchMedia('(max-width:699px)'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const menu=document.querySelector('.menu-toggle'), nav=document.querySelector('.site-nav');
+ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('is-open',open)});
+ nav.addEventListener('click',e=>{if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('is-open')}});
+ const hero=document.querySelector('.hero-photo img');hero.addEventListener('load',()=>hero.closest('.hero-photo').classList.add('is-loaded'),{once:true});if(hero.complete)hero.closest('.hero-photo').classList.add('is-loaded');
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+ const form=document.querySelector('#cake-inquiry'),status=document.querySelector('#inquiry-status'),follow=document.querySelector('#instagram-followup');
+ form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const v=new FormData(form);const message=['Cake inquiry for Big Cake Mom','Name: '+v.get('name'),'Email: '+v.get('email'),'Event date: '+v.get('date'),'Approx. servings: '+(v.get('servings')||'Not sure yet'),'Occasion: '+v.get('occasion'),'Cake idea: '+(v.get('details')||'I would like to discuss ideas.')].join('\n');try{await navigator.clipboard.writeText(message);status.textContent='Your details are copied. Continue to Instagram and paste them into the inquiry form in the bio.';follow.classList.add('is-visible')}catch{status.textContent='Automatic copying is unavailable here. Copy your prepared details below, then continue to Instagram.';let area=form.querySelector('.copy-fallback');if(!area){area=document.createElement('textarea');area.className='copy-fallback';area.readOnly=true;area.setAttribute('aria-label','Your prepared cake inquiry');form.append(area)}area.value=message;area.hidden=false;area.focus();area.select();follow.classList.add('is-visible')}});
+
+})();
+</script>
+</body>
+</html>
